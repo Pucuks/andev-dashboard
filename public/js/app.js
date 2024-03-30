@@ -1,21 +1,21 @@
 const sidebarToggler = document.querySelector(".sidebar-toggler");
 const sidebarBody = document.querySelector(".sidebar .sidebar-body");
 const sidebarHeaderToggler = document.querySelector(
-    ".sidebar-header .sidebar-toggler"
+    ".sidebar-header .sidebar-toggler",
 );
 const body = document.body;
 let sidebar = document.querySelector(".sidebar");
 const settingsSidebarToggler = document.querySelector(
-    ".settings-sidebar-toggler"
+    ".settings-sidebar-toggler",
 );
 const sidebarThemeSettings = document.querySelectorAll(
-    'input[name="sidebarThemeSettings"]'
+    'input[name="sidebarThemeSettings"]',
 );
 var horizontalMenuToggle = document.querySelector(
-    '[data-toggle="horizontal-menu-toggle"]'
+    '[data-toggle="horizontal-menu-toggle"]',
 );
 var navItems = document.querySelectorAll(
-    ".horizontal-menu .page-navigation >.nav-item"
+    ".horizontal-menu .page-navigation >.nav-item",
 );
 
 // Sidebar toggle to sidebar-folded
@@ -67,7 +67,7 @@ feather.replace();
 
 // initializing bootstrap tooltip
 var tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    document.querySelectorAll('[data-bs-toggle="tooltip"]'),
 );
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
@@ -75,7 +75,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 // initializing bootstrap popover
 var popoverTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="popover"]')
+    document.querySelectorAll('[data-bs-toggle="popover"]'),
 );
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl);
@@ -128,7 +128,7 @@ document.addEventListener("click", function (e) {
 if (horizontalMenuToggle) {
     horizontalMenuToggle.addEventListener("click", function () {
         var bottomNavbar = document.querySelector(
-            ".horizontal-menu .bottom-navbar"
+            ".horizontal-menu .bottom-navbar",
         );
         bottomNavbar.classList.toggle("header-toggled");
     });
@@ -147,4 +147,3 @@ navItems.forEach(function (navItem) {
         }
     });
 });
-

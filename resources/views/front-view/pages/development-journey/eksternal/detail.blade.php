@@ -275,7 +275,6 @@
                                             <p>File yang sudah diunggah: <a
                                                     href="{{ asset('storage/' . $data['pfile']) }}" target="_blank">Lihat
                                                     File</a>
-                                                <input type="file">
                                         @endif
                                         <input type="file" class="form-control" id="file" name="file">
                                         @error('file')
@@ -411,7 +410,7 @@
                         <div class="form-group row">
                             <label for="file" class="col-sm-4 col-form-label">{{ __('File') }}</label>
                             <div class="col-sm-8">
-                                <input type="file" class="form-control" id="file" name="file">
+                                <input type="file" class="form-control" id="file" name="file" required>
                                 @error('file')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
